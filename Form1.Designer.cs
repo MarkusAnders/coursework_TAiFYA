@@ -31,8 +31,6 @@ namespace coursework_TAiFYA
 		{
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.firstTable = new System.Windows.Forms.DataGridView();
-			this.PerformToLexemAnalys = new System.Windows.Forms.Button();
-			this.load_file = new System.Windows.Forms.Button();
 			this.TextMain = new System.Windows.Forms.RichTextBox();
 			this.tccTable = new System.Windows.Forms.DataGridView();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -41,6 +39,9 @@ namespace coursework_TAiFYA
 			this.separatorTable = new System.Windows.Forms.DataGridView();
 			this.indifTable = new System.Windows.Forms.DataGridView();
 			this.keywordTable = new System.Windows.Forms.DataGridView();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.запуститьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.firstTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tccTable)).BeginInit();
@@ -50,6 +51,7 @@ namespace coursework_TAiFYA
 			((System.ComponentModel.ISupportInitialize)(this.separatorTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.indifTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.keywordTable)).BeginInit();
+			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tabPage1
@@ -76,34 +78,10 @@ namespace coursework_TAiFYA
 			this.firstTable.Size = new System.Drawing.Size(338, 428);
 			this.firstTable.TabIndex = 0;
 			// 
-			// PerformToLexemAnalys
-			// 
-			this.PerformToLexemAnalys.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.PerformToLexemAnalys.Location = new System.Drawing.Point(177, 466);
-			this.PerformToLexemAnalys.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.PerformToLexemAnalys.Name = "PerformToLexemAnalys";
-			this.PerformToLexemAnalys.Size = new System.Drawing.Size(165, 45);
-			this.PerformToLexemAnalys.TabIndex = 8;
-			this.PerformToLexemAnalys.Text = "Выполнить";
-			this.PerformToLexemAnalys.UseVisualStyleBackColor = true;
-			this.PerformToLexemAnalys.Click += new System.EventHandler(this.PerformToLexemAnalys_Click);
-			// 
-			// load_file
-			// 
-			this.load_file.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.load_file.Location = new System.Drawing.Point(6, 466);
-			this.load_file.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.load_file.Name = "load_file";
-			this.load_file.Size = new System.Drawing.Size(165, 45);
-			this.load_file.TabIndex = 7;
-			this.load_file.Text = "Загрузить";
-			this.load_file.UseVisualStyleBackColor = true;
-			this.load_file.Click += new System.EventHandler(this.load_file_Click);
-			// 
 			// TextMain
 			// 
 			this.TextMain.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.TextMain.Location = new System.Drawing.Point(1032, 31);
+			this.TextMain.Location = new System.Drawing.Point(1030, 55);
 			this.TextMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.TextMain.Name = "TextMain";
 			this.TextMain.Size = new System.Drawing.Size(225, 428);
@@ -125,7 +103,7 @@ namespace coursework_TAiFYA
 			// 
 			this.tabControl1.Controls.Add(this.tabPage1);
 			this.tabControl1.Controls.Add(this.tabPage2);
-			this.tabControl1.Location = new System.Drawing.Point(2, 8);
+			this.tabControl1.Location = new System.Drawing.Point(0, 30);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
 			this.tabControl1.Size = new System.Drawing.Size(1028, 457);
@@ -188,15 +166,43 @@ namespace coursework_TAiFYA
 			this.keywordTable.Size = new System.Drawing.Size(339, 213);
 			this.keywordTable.TabIndex = 0;
 			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.загрузитьToolStripMenuItem,
+            this.запуститьToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(1259, 31);
+			this.menuStrip1.TabIndex = 10;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// загрузитьToolStripMenuItem
+			// 
+			this.загрузитьToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
+			this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(101, 27);
+			this.загрузитьToolStripMenuItem.Text = "Загрузить";
+			this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
+			// 
+			// запуститьToolStripMenuItem
+			// 
+			this.запуститьToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.запуститьToolStripMenuItem.Name = "запуститьToolStripMenuItem";
+			this.запуститьToolStripMenuItem.Size = new System.Drawing.Size(101, 27);
+			this.запуститьToolStripMenuItem.Text = "Запустить";
+			this.запуститьToolStripMenuItem.Click += new System.EventHandler(this.запуститьToolStripMenuItem_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1259, 519);
-			this.Controls.Add(this.PerformToLexemAnalys);
-			this.Controls.Add(this.load_file);
+			this.ClientSize = new System.Drawing.Size(1259, 493);
 			this.Controls.Add(this.TextMain);
 			this.Controls.Add(this.tabControl1);
+			this.Controls.Add(this.menuStrip1);
+			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.tabPage1.ResumeLayout(false);
@@ -208,7 +214,10 @@ namespace coursework_TAiFYA
 			((System.ComponentModel.ISupportInitialize)(this.separatorTable)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.indifTable)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.keywordTable)).EndInit();
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -216,8 +225,6 @@ namespace coursework_TAiFYA
 
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.DataGridView firstTable;
-		private System.Windows.Forms.Button PerformToLexemAnalys;
-		private System.Windows.Forms.Button load_file;
 		private System.Windows.Forms.RichTextBox TextMain;
 		public System.Windows.Forms.DataGridView tccTable;
 		private System.Windows.Forms.TabControl tabControl1;
@@ -226,6 +233,9 @@ namespace coursework_TAiFYA
 		private System.Windows.Forms.DataGridView separatorTable;
 		private System.Windows.Forms.DataGridView indifTable;
 		private System.Windows.Forms.DataGridView keywordTable;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem загрузитьToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem запуститьToolStripMenuItem;
 	}
 }
 

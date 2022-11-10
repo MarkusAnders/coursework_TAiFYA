@@ -11,16 +11,16 @@ namespace coursework_TAiFYA
 			InitializeComponent();
 		}
 
-		private void load_file_Click(object sender, EventArgs e)
+		private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			OpenFileDialog ofd = new OpenFileDialog();
-			if (ofd.ShowDialog() == DialogResult.OK)
-			{
-				TextMain.Text = File.ReadAllText(ofd.FileName);
-			}
-		}
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                TextMain.Text = File.ReadAllText(ofd.FileName);
+            }
+        }
 
-		private void PerformToLexemAnalys_Click(object sender, EventArgs e)
+		private void запуститьToolStripMenuItem_Click(object sender, EventArgs e)
 		{
             lexemes lxms = new lexemes();
             lemexeClass lxmscls = new lemexeClass();
