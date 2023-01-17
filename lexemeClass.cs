@@ -7,18 +7,18 @@ namespace coursework_TAiFYA
 {
     public class lemexeClass
     {
-        public List<string> keywords = new List<string>()
+        public readonly List<string> keywords = new List<string>()
         {
-            "var", "begin", "integer", "repeat", "until", "end"
+            "var", "begin", "integer", "repeat", "until", "end" , "or"
         };
 
-        public List<string> separators_list = new List<string>()
+        public readonly List<string> separators_list = new List<string>()
         {
             "+", "-", "*", "/", ":=", "=", ":", ";", ".", ",", "(", ")", "<", ">"
         };
 
-        public List<string> identifiers = new List<string>();
-        public List<string> literals = new List<string>();
+        public readonly List<string> identifiers = new List<string>();
+        public readonly List<string> literals = new List<string>();
 
         public List<Tuple<string, int>> Classify(List<Tuple<string, TypeLexeme>> lexemes)
         {
