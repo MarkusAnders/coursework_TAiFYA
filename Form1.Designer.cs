@@ -36,12 +36,10 @@ namespace coursework_TAiFYA
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.keywordTable = new System.Windows.Forms.DataGridView();
 			this.indifTable = new System.Windows.Forms.DataGridView();
-			this.Identifier = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.separatorTable = new System.Windows.Forms.DataGridView();
-			this.Separators = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.literalTable = new System.Windows.Forms.DataGridView();
-			this.Litaral = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panelTitle = new System.Windows.Forms.Panel();
 			this.labelTitle = new System.Windows.Forms.Label();
 			this.panelMenuButton = new System.Windows.Forms.Panel();
@@ -49,22 +47,28 @@ namespace coursework_TAiFYA
 			this.button_choiceFile = new System.Windows.Forms.Button();
 			this.panelMenuTitle = new System.Windows.Forms.Panel();
 			this.panelPlaceOfWork = new System.Windows.Forms.Panel();
-			this.keywordTable = new System.Windows.Forms.DataGridView();
-			this.keywords = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.button_clearRichBox = new System.Windows.Forms.Button();
+			this.Identifier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numberI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.keywords = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numberK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Litaral = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numberL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Separators = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numberR = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.firstTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tccTable)).BeginInit();
 			this.tabControl1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			this.panel2.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.keywordTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.indifTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.separatorTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.literalTable)).BeginInit();
 			this.panelTitle.SuspendLayout();
 			this.panelMenuButton.SuspendLayout();
 			this.panelPlaceOfWork.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.keywordTable)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// tabPage1
@@ -100,7 +104,7 @@ namespace coursework_TAiFYA
 			this.TextMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.TextMain.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-			this.TextMain.Location = new System.Drawing.Point(1041, 96);
+			this.TextMain.Location = new System.Drawing.Point(1092, 96);
 			this.TextMain.Margin = new System.Windows.Forms.Padding(2);
 			this.TextMain.Name = "TextMain";
 			this.TextMain.Size = new System.Drawing.Size(279, 427);
@@ -124,7 +128,7 @@ namespace coursework_TAiFYA
 			this.tccTable.RowHeadersWidth = 51;
 			this.tccTable.RowTemplate.Height = 24;
 			this.tccTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.tccTable.Size = new System.Drawing.Size(275, 471);
+			this.tccTable.Size = new System.Drawing.Size(286, 471);
 			this.tccTable.TabIndex = 4;
 			// 
 			// tabControl1
@@ -139,7 +143,7 @@ namespace coursework_TAiFYA
 			this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(1032, 511);
+			this.tabControl1.Size = new System.Drawing.Size(1083, 511);
 			this.tabControl1.TabIndex = 9;
 			// 
 			// tabPage2
@@ -151,7 +155,7 @@ namespace coursework_TAiFYA
 			this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-			this.tabPage2.Size = new System.Drawing.Size(1024, 478);
+			this.tabPage2.Size = new System.Drawing.Size(1075, 478);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "ТСС таблица";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -166,8 +170,29 @@ namespace coursework_TAiFYA
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panel2.Location = new System.Drawing.Point(2, 2);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(1018, 472);
+			this.panel2.Size = new System.Drawing.Size(1069, 472);
 			this.panel2.TabIndex = 7;
+			// 
+			// keywordTable
+			// 
+			this.keywordTable.AllowUserToAddRows = false;
+			this.keywordTable.AllowUserToDeleteRows = false;
+			this.keywordTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.keywordTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.keywordTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.keywords,
+            this.numberK});
+			this.keywordTable.Location = new System.Drawing.Point(292, 0);
+			this.keywordTable.Margin = new System.Windows.Forms.Padding(2);
+			this.keywordTable.Name = "keywordTable";
+			this.keywordTable.ReadOnly = true;
+			this.keywordTable.RowHeadersVisible = false;
+			this.keywordTable.RowHeadersWidth = 51;
+			this.keywordTable.RowTemplate.Height = 24;
+			this.keywordTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.keywordTable.Size = new System.Drawing.Size(190, 472);
+			this.keywordTable.TabIndex = 5;
 			// 
 			// indifTable
 			// 
@@ -178,8 +203,9 @@ namespace coursework_TAiFYA
 			this.indifTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.indifTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.indifTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Identifier});
-			this.indifTable.Location = new System.Drawing.Point(465, 0);
+            this.Identifier,
+            this.numberI});
+			this.indifTable.Location = new System.Drawing.Point(486, 0);
 			this.indifTable.Margin = new System.Windows.Forms.Padding(2);
 			this.indifTable.Name = "indifTable";
 			this.indifTable.ReadOnly = true;
@@ -187,14 +213,8 @@ namespace coursework_TAiFYA
 			this.indifTable.RowHeadersWidth = 51;
 			this.indifTable.RowTemplate.Height = 24;
 			this.indifTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.indifTable.Size = new System.Drawing.Size(180, 472);
+			this.indifTable.Size = new System.Drawing.Size(190, 472);
 			this.indifTable.TabIndex = 5;
-			// 
-			// Identifier
-			// 
-			this.Identifier.HeaderText = "Индификатор";
-			this.Identifier.Name = "Identifier";
-			this.Identifier.ReadOnly = true;
 			// 
 			// separatorTable
 			// 
@@ -205,8 +225,9 @@ namespace coursework_TAiFYA
 			this.separatorTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.separatorTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.separatorTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Separators});
-			this.separatorTable.Location = new System.Drawing.Point(833, 0);
+            this.Separators,
+            this.numberR});
+			this.separatorTable.Location = new System.Drawing.Point(874, 0);
 			this.separatorTable.Margin = new System.Windows.Forms.Padding(2);
 			this.separatorTable.Name = "separatorTable";
 			this.separatorTable.ReadOnly = true;
@@ -214,14 +235,8 @@ namespace coursework_TAiFYA
 			this.separatorTable.RowHeadersWidth = 51;
 			this.separatorTable.RowTemplate.Height = 24;
 			this.separatorTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.separatorTable.Size = new System.Drawing.Size(180, 472);
+			this.separatorTable.Size = new System.Drawing.Size(195, 472);
 			this.separatorTable.TabIndex = 7;
-			// 
-			// Separators
-			// 
-			this.Separators.HeaderText = "Разделители ";
-			this.Separators.Name = "Separators";
-			this.Separators.ReadOnly = true;
 			// 
 			// literalTable
 			// 
@@ -232,8 +247,9 @@ namespace coursework_TAiFYA
 			this.literalTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.literalTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.literalTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Litaral});
-			this.literalTable.Location = new System.Drawing.Point(649, 0);
+            this.Litaral,
+            this.numberL});
+			this.literalTable.Location = new System.Drawing.Point(680, 0);
 			this.literalTable.Margin = new System.Windows.Forms.Padding(2);
 			this.literalTable.Name = "literalTable";
 			this.literalTable.ReadOnly = true;
@@ -241,14 +257,8 @@ namespace coursework_TAiFYA
 			this.literalTable.RowHeadersWidth = 51;
 			this.literalTable.RowTemplate.Height = 24;
 			this.literalTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.literalTable.Size = new System.Drawing.Size(180, 472);
+			this.literalTable.Size = new System.Drawing.Size(190, 472);
 			this.literalTable.TabIndex = 6;
-			// 
-			// Litaral
-			// 
-			this.Litaral.HeaderText = "Литералы";
-			this.Litaral.Name = "Litaral";
-			this.Litaral.ReadOnly = true;
 			// 
 			// panelTitle
 			// 
@@ -257,7 +267,7 @@ namespace coursework_TAiFYA
 			this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panelTitle.Location = new System.Drawing.Point(0, 0);
 			this.panelTitle.Name = "panelTitle";
-			this.panelTitle.Size = new System.Drawing.Size(1331, 55);
+			this.panelTitle.Size = new System.Drawing.Size(1382, 55);
 			this.panelTitle.TabIndex = 10;
 			// 
 			// labelTitle
@@ -266,7 +276,7 @@ namespace coursework_TAiFYA
 			this.labelTitle.AutoSize = true;
 			this.labelTitle.Font = new System.Drawing.Font("Segoe UI Symbol", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.labelTitle.ForeColor = System.Drawing.Color.White;
-			this.labelTitle.Location = new System.Drawing.Point(465, 13);
+			this.labelTitle.Location = new System.Drawing.Point(491, 13);
 			this.labelTitle.Name = "labelTitle";
 			this.labelTitle.Size = new System.Drawing.Size(435, 30);
 			this.labelTitle.TabIndex = 1;
@@ -338,35 +348,8 @@ namespace coursework_TAiFYA
 			this.panelPlaceOfWork.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelPlaceOfWork.Location = new System.Drawing.Point(200, 0);
 			this.panelPlaceOfWork.Name = "panelPlaceOfWork";
-			this.panelPlaceOfWork.Size = new System.Drawing.Size(1331, 591);
+			this.panelPlaceOfWork.Size = new System.Drawing.Size(1382, 591);
 			this.panelPlaceOfWork.TabIndex = 12;
-			// 
-			// keywordTable
-			// 
-			this.keywordTable.AllowUserToAddRows = false;
-			this.keywordTable.AllowUserToDeleteRows = false;
-			this.keywordTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.keywordTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.keywordTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.keywords});
-			this.keywordTable.Location = new System.Drawing.Point(281, 1);
-			this.keywordTable.Margin = new System.Windows.Forms.Padding(2);
-			this.keywordTable.Name = "keywordTable";
-			this.keywordTable.ReadOnly = true;
-			this.keywordTable.RowHeadersVisible = false;
-			this.keywordTable.RowHeadersWidth = 51;
-			this.keywordTable.RowTemplate.Height = 24;
-			this.keywordTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.keywordTable.Size = new System.Drawing.Size(180, 472);
-			this.keywordTable.TabIndex = 5;
-			// 
-			// keywords
-			// 
-			this.keywords.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.keywords.HeaderText = "Ключевые слова";
-			this.keywords.Name = "keywords";
-			this.keywords.ReadOnly = true;
 			// 
 			// button_clearRichBox
 			// 
@@ -376,7 +359,7 @@ namespace coursework_TAiFYA
 			this.button_clearRichBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button_clearRichBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button_clearRichBox.ForeColor = System.Drawing.Color.Gainsboro;
-			this.button_clearRichBox.Location = new System.Drawing.Point(1042, 528);
+			this.button_clearRichBox.Location = new System.Drawing.Point(1093, 528);
 			this.button_clearRichBox.Name = "button_clearRichBox";
 			this.button_clearRichBox.Size = new System.Drawing.Size(277, 50);
 			this.button_clearRichBox.TabIndex = 15;
@@ -384,11 +367,67 @@ namespace coursework_TAiFYA
 			this.button_clearRichBox.UseVisualStyleBackColor = true;
 			this.button_clearRichBox.Click += new System.EventHandler(this.button_clearRichBox_Click);
 			// 
+			// Identifier
+			// 
+			this.Identifier.FillWeight = 118.7817F;
+			this.Identifier.HeaderText = "Индификатор";
+			this.Identifier.Name = "Identifier";
+			this.Identifier.ReadOnly = true;
+			// 
+			// numberI
+			// 
+			this.numberI.FillWeight = 81.21828F;
+			this.numberI.HeaderText = "Номер";
+			this.numberI.Name = "numberI";
+			this.numberI.ReadOnly = true;
+			// 
+			// keywords
+			// 
+			this.keywords.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.keywords.HeaderText = "Ключевые слова";
+			this.keywords.Name = "keywords";
+			this.keywords.ReadOnly = true;
+			// 
+			// numberK
+			// 
+			this.numberK.HeaderText = "Номер";
+			this.numberK.Name = "numberK";
+			this.numberK.ReadOnly = true;
+			this.numberK.Width = 80;
+			// 
+			// Litaral
+			// 
+			this.Litaral.FillWeight = 118.7817F;
+			this.Litaral.HeaderText = "Литералы";
+			this.Litaral.Name = "Litaral";
+			this.Litaral.ReadOnly = true;
+			// 
+			// numberL
+			// 
+			this.numberL.FillWeight = 81.21828F;
+			this.numberL.HeaderText = "Номер";
+			this.numberL.Name = "numberL";
+			this.numberL.ReadOnly = true;
+			// 
+			// Separators
+			// 
+			this.Separators.FillWeight = 118.7817F;
+			this.Separators.HeaderText = "Разделители ";
+			this.Separators.Name = "Separators";
+			this.Separators.ReadOnly = true;
+			// 
+			// numberR
+			// 
+			this.numberR.FillWeight = 81.21828F;
+			this.numberR.HeaderText = "Номер";
+			this.numberR.Name = "numberR";
+			this.numberR.ReadOnly = true;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1531, 591);
+			this.ClientSize = new System.Drawing.Size(1582, 591);
 			this.Controls.Add(this.panelPlaceOfWork);
 			this.Controls.Add(this.panelMenuButton);
 			this.Margin = new System.Windows.Forms.Padding(2);
@@ -402,6 +441,7 @@ namespace coursework_TAiFYA
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage2.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.keywordTable)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.indifTable)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.separatorTable)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.literalTable)).EndInit();
@@ -409,7 +449,6 @@ namespace coursework_TAiFYA
 			this.panelTitle.PerformLayout();
 			this.panelMenuButton.ResumeLayout(false);
 			this.panelPlaceOfWork.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.keywordTable)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -425,9 +464,6 @@ namespace coursework_TAiFYA
 		private System.Windows.Forms.DataGridView literalTable;
 		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.DataGridView firstTable;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Identifier;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Litaral;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Separators;
 		private System.Windows.Forms.Panel panelTitle;
 		private System.Windows.Forms.Label labelTitle;
 		private System.Windows.Forms.Panel panelMenuButton;
@@ -436,9 +472,16 @@ namespace coursework_TAiFYA
 		private System.Windows.Forms.Panel panelMenuTitle;
 		private System.Windows.Forms.Panel panelPlaceOfWork;
 		public System.Windows.Forms.DataGridView keywordTable;
-		private System.Windows.Forms.DataGridViewTextBoxColumn keywords;
 		private System.Windows.Forms.Button button_clearRichBox;
 		public System.Windows.Forms.RichTextBox TextMain;
+		private System.Windows.Forms.DataGridViewTextBoxColumn keywords;
+		private System.Windows.Forms.DataGridViewTextBoxColumn numberK;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Identifier;
+		private System.Windows.Forms.DataGridViewTextBoxColumn numberI;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Separators;
+		private System.Windows.Forms.DataGridViewTextBoxColumn numberR;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Litaral;
+		private System.Windows.Forms.DataGridViewTextBoxColumn numberL;
 	}
 }
 

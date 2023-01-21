@@ -24,72 +24,88 @@ namespace coursework_TAiFYA
 
         private void button_complete_Click(object sender, EventArgs e)
         {
-            lexemes lxms = new lexemes();
-            lemexeClass lxmscls = new lemexeClass();
-            var lexemes = lxms.Check(TextMain.Text);
-            var tcc = lxmscls.Classify(lexemes);
+			try
+			{
+                lexemes lxms = new lexemes();
+                lemexeClass lxmscls = new lemexeClass();
+                var lexemes = lxms.Check(TextMain.Text);
+                var tcc = lxmscls.Classify(lexemes);
 
-            firstTable.DataSource = lexemes;
-            tccTable.DataSource = tcc;
+                firstTable.DataSource = lexemes;
+                tccTable.DataSource = tcc;
 
-            #region[Вывод список значений списков]
+                #region[Вывод список значений списков]
 
-            #region[Ключевые слова]
-            if (keywordTable.Columns.Contains("Keywords"))
-            {
-                foreach (var i in lxmscls.keywords)
+                keywordTable.Rows.Clear();
+                indifTable.Rows.Clear();
+                literalTable.Rows.Clear();
+                separatorTable.Rows.Clear();
+
+                #region[Ключевые слова]
+                if (keywordTable.Columns.Contains("Keywords") && keywordTable.Columns.Contains("numberK"))
                 {
-                    keywordTable.Rows.Add(i.ToString());
+                    for (int i = 0; i < lxmscls.keywords.Count; i++)
+                        keywordTable.Rows.Add(lxmscls.keywords[i], i.ToString());
                 }
-            }
-            #endregion
+                #endregion
 
-            #region[Индификаторы]
-            if (indifTable.Columns.Contains("Identifier"))
-            {
-                foreach (var i in lxmscls.identifiers)
+                #region[Индификаторы]
+                if (indifTable.Columns.Contains("Identifier") && indifTable.Columns.Contains("numberI"))
                 {
-                    indifTable.Rows.Add(i.ToString());
+                    for (int i = 0; i < lxmscls.identifiers.Count; i++)
+                        indifTable.Rows.Add(lxmscls.identifiers[i], i.ToString());
                 }
-            }
-            #endregion
+                #endregion
 
-            #region[Литералы]
-            if (literalTable.Columns.Contains("Litaral"))
-            {
-                foreach (var i in lxmscls.literals)
+                #region[Литералы]
+                if (literalTable.Columns.Contains("Litaral") && literalTable.Columns.Contains("numberL"))
                 {
-                    literalTable.Rows.Add(i.ToString());
+                    for (int i = 0; i < lxmscls.literals.Count; i++)
+                        literalTable.Rows.Add(lxmscls.literals[i], i.ToString());
                 }
-            }
-            #endregion
+                #endregion
 
-            #region[Разделители]
-            if (separatorTable.Columns.Contains("Separators"))
-            {
-                foreach (var i in lxmscls.separators_list)
+                #region[Разделители]
+                if (separatorTable.Columns.Contains("Separators") && separatorTable.Columns.Contains("numberR"))
                 {
-                    separatorTable.Rows.Add(i.ToString());
+                    for (int i = 0; i < lxmscls.separators_list.Count; i++)
+                        separatorTable.Rows.Add(lxmscls.separators_list[i], i.ToString());
                 }
-            }
-            #endregion
+                #endregion
 
-            #endregion
+                #endregion
+            }
+            catch (Exception ex)
+			{
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             #region[Настройка вида таблиц]
+
             firstTable.DefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
             firstTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 11);
+            firstTable.Columns[0].HeaderText = "Лексема";
+            firstTable.Columns[1].HeaderText = "Тип лексемы";
+            firstTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             tccTable.DefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
             tccTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 11);
+            tccTable.Columns[0].HeaderText = "Входные данные";
+            tccTable.Columns[1].HeaderText = "Результат";
             tccTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             keywordTable.DefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
-            keywordTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 11);
+            keywordTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
+
             literalTable.DefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
-            literalTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 11);
+            literalTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
+
             indifTable.DefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
-            indifTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 11);
+            indifTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
+
             separatorTable.DefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
-            separatorTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 11);
+            separatorTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
+
             #endregion
         }
         private void button_clearRichBox_Click(object sender, EventArgs e)

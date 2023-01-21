@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace coursework_TAiFYA
 {
@@ -54,7 +55,7 @@ namespace coursework_TAiFYA
 
             for (int i = 0; i < text.Length; i++)
             {
-
+			
                 if (tl == TypeLexeme.I && buffer.Length > 8)
                 {
                     throw new Exception("Длина идентификатора превысила 8 символов");
@@ -64,7 +65,7 @@ namespace coursework_TAiFYA
                 {
                     case Symbol.Letter:
 
-                        if (buffer == "")
+                        if (buffer == " ")
                         {
                             tl = TypeLexeme.I;
                             buffer += text[i];
@@ -75,10 +76,10 @@ namespace coursework_TAiFYA
                         {
                             case TypeLexeme.I:
                                 buffer += text[i];
-                                break;
+								break;
 
-                            case TypeLexeme.L:
-                                throw new Exception("Наименование не может начинаться с цифр");
+							case TypeLexeme.L:
+								throw new Exception("Наименование не может начинаться с цифр");
 
                             case TypeLexeme.R:
                                 lexems.Add(new Tuple<string, TypeLexeme>(buffer, tl));
@@ -115,7 +116,7 @@ namespace coursework_TAiFYA
                         }
                         break;
 
-                    case Symbol.Separator:
+                    case Symbol.Separator: 
 
                         if (buffer == "")
                         {
@@ -151,18 +152,11 @@ namespace coursework_TAiFYA
 
                     case Symbol.Space:
 
-                        switch (tl)
-                        {
-                            case TypeLexeme.I:
-                                lexems.Add(new Tuple<string, TypeLexeme>(buffer, TypeLexeme.I));
-                                break;
-                            case TypeLexeme.L:
-                                lexems.Add(new Tuple<string, TypeLexeme>(buffer, TypeLexeme.L));
-                                break;
-                            case TypeLexeme.R:
-                                lexems.Add(new Tuple<string, TypeLexeme>(buffer, TypeLexeme.R));
-                                break;
-                        }
+						if (buffer.Length == 0)
+						{
+							break;
+						}
+                        lexems.Add(new Tuple<string, TypeLexeme>(buffer, tl));
                         buffer = "";
                         break;
 
