@@ -36,7 +36,7 @@ namespace coursework_TAiFYA
             {
                 return Symbol.Liters;
             }
-            else if (separators_list.Contains(symbol.ToString()) || symbol == '\n')
+            else if (separators_list.Contains(symbol.ToString()))
             {
                 return Symbol.Separator;
             }
@@ -49,9 +49,16 @@ namespace coursework_TAiFYA
 
         public List<Tuple<string, TypeLexeme>> Check(string text)
         {
+            text = text.Replace('\n', ' ');
+
             List<Tuple<string, TypeLexeme>> lexems = new List<Tuple<string, TypeLexeme>>();
             string buffer = "";
             TypeLexeme tl = TypeLexeme.I;
+
+			if (text.Length == 0)
+			{
+                throw new Exception("Текстовое поле пустое!");
+			}
 
             for (int i = 0; i < text.Length; i++)
             {
@@ -65,7 +72,7 @@ namespace coursework_TAiFYA
                 {
                     case Symbol.Letter:
 
-                        if (buffer == " ")
+                        if (buffer == "")
                         {
                             tl = TypeLexeme.I;
                             buffer += text[i];
@@ -151,7 +158,6 @@ namespace coursework_TAiFYA
                         break;
 
                     case Symbol.Space:
-
 						if (buffer.Length == 0)
 						{
 							break;

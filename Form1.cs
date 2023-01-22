@@ -74,14 +74,21 @@ namespace coursework_TAiFYA
                 #endregion
 
                 #endregion
+
+                SettingTable();
             }
             catch (Exception ex)
 			{
                 MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void button_clearRichBox_Click(object sender, EventArgs e)
+        {
+            TextMain.Clear();
+        }
 
-            #region[Настройка вида таблиц]
-
+        private void SettingTable()
+		{
             firstTable.DefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
             firstTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 11);
             firstTable.Columns[0].HeaderText = "Лексема";
@@ -105,12 +112,6 @@ namespace coursework_TAiFYA
 
             separatorTable.DefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
             separatorTable.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei", 10);
-
-            #endregion
-        }
-        private void button_clearRichBox_Click(object sender, EventArgs e)
-        {
-            TextMain.Clear();
         }
     }
 }
