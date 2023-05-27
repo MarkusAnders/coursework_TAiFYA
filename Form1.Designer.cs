@@ -37,9 +37,17 @@ namespace coursework_TAiFYA
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.keywordTable = new System.Windows.Forms.DataGridView();
+			this.keywords = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numberK = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.indifTable = new System.Windows.Forms.DataGridView();
+			this.Identifier = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numberI = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.separatorTable = new System.Windows.Forms.DataGridView();
+			this.Separators = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numberR = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.literalTable = new System.Windows.Forms.DataGridView();
+			this.Litaral = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numberL = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.panelTitle = new System.Windows.Forms.Panel();
 			this.labelTitle = new System.Windows.Forms.Label();
 			this.panelMenuButton = new System.Windows.Forms.Panel();
@@ -48,14 +56,6 @@ namespace coursework_TAiFYA
 			this.panelMenuTitle = new System.Windows.Forms.Panel();
 			this.panelPlaceOfWork = new System.Windows.Forms.Panel();
 			this.button_clearRichBox = new System.Windows.Forms.Button();
-			this.Identifier = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.numberI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.keywords = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.numberK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Litaral = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.numberL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Separators = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.numberR = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.tabPage1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.firstTable)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.tccTable)).BeginInit();
@@ -80,7 +80,7 @@ namespace coursework_TAiFYA
 			this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-			this.tabPage1.Size = new System.Drawing.Size(1024, 478);
+			this.tabPage1.Size = new System.Drawing.Size(1075, 478);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Лексический анализ";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@ namespace coursework_TAiFYA
 			this.firstTable.ReadOnly = true;
 			this.firstTable.RowHeadersVisible = false;
 			this.firstTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.firstTable.Size = new System.Drawing.Size(1018, 472);
+			this.firstTable.Size = new System.Drawing.Size(1069, 472);
 			this.firstTable.TabIndex = 0;
 			// 
 			// TextMain
@@ -194,6 +194,20 @@ namespace coursework_TAiFYA
 			this.keywordTable.Size = new System.Drawing.Size(190, 472);
 			this.keywordTable.TabIndex = 5;
 			// 
+			// keywords
+			// 
+			this.keywords.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.keywords.HeaderText = "Ключевые слова";
+			this.keywords.Name = "keywords";
+			this.keywords.ReadOnly = true;
+			// 
+			// numberK
+			// 
+			this.numberK.HeaderText = "Номер";
+			this.numberK.Name = "numberK";
+			this.numberK.ReadOnly = true;
+			this.numberK.Width = 80;
+			// 
 			// indifTable
 			// 
 			this.indifTable.AllowUserToAddRows = false;
@@ -215,6 +229,20 @@ namespace coursework_TAiFYA
 			this.indifTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.indifTable.Size = new System.Drawing.Size(190, 472);
 			this.indifTable.TabIndex = 5;
+			// 
+			// Identifier
+			// 
+			this.Identifier.FillWeight = 118.7817F;
+			this.Identifier.HeaderText = "Индификатор";
+			this.Identifier.Name = "Identifier";
+			this.Identifier.ReadOnly = true;
+			// 
+			// numberI
+			// 
+			this.numberI.FillWeight = 81.21828F;
+			this.numberI.HeaderText = "Номер";
+			this.numberI.Name = "numberI";
+			this.numberI.ReadOnly = true;
 			// 
 			// separatorTable
 			// 
@@ -238,6 +266,20 @@ namespace coursework_TAiFYA
 			this.separatorTable.Size = new System.Drawing.Size(195, 472);
 			this.separatorTable.TabIndex = 7;
 			// 
+			// Separators
+			// 
+			this.Separators.FillWeight = 118.7817F;
+			this.Separators.HeaderText = "Разделители ";
+			this.Separators.Name = "Separators";
+			this.Separators.ReadOnly = true;
+			// 
+			// numberR
+			// 
+			this.numberR.FillWeight = 81.21828F;
+			this.numberR.HeaderText = "Номер";
+			this.numberR.Name = "numberR";
+			this.numberR.ReadOnly = true;
+			// 
 			// literalTable
 			// 
 			this.literalTable.AllowUserToAddRows = false;
@@ -259,6 +301,20 @@ namespace coursework_TAiFYA
 			this.literalTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.literalTable.Size = new System.Drawing.Size(190, 472);
 			this.literalTable.TabIndex = 6;
+			// 
+			// Litaral
+			// 
+			this.Litaral.FillWeight = 118.7817F;
+			this.Litaral.HeaderText = "Литералы";
+			this.Litaral.Name = "Litaral";
+			this.Litaral.ReadOnly = true;
+			// 
+			// numberL
+			// 
+			this.numberL.FillWeight = 81.21828F;
+			this.numberL.HeaderText = "Номер";
+			this.numberL.Name = "numberL";
+			this.numberL.ReadOnly = true;
 			// 
 			// panelTitle
 			// 
@@ -367,62 +423,6 @@ namespace coursework_TAiFYA
 			this.button_clearRichBox.UseVisualStyleBackColor = true;
 			this.button_clearRichBox.Click += new System.EventHandler(this.button_clearRichBox_Click);
 			// 
-			// Identifier
-			// 
-			this.Identifier.FillWeight = 118.7817F;
-			this.Identifier.HeaderText = "Индификатор";
-			this.Identifier.Name = "Identifier";
-			this.Identifier.ReadOnly = true;
-			// 
-			// numberI
-			// 
-			this.numberI.FillWeight = 81.21828F;
-			this.numberI.HeaderText = "Номер";
-			this.numberI.Name = "numberI";
-			this.numberI.ReadOnly = true;
-			// 
-			// keywords
-			// 
-			this.keywords.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.keywords.HeaderText = "Ключевые слова";
-			this.keywords.Name = "keywords";
-			this.keywords.ReadOnly = true;
-			// 
-			// numberK
-			// 
-			this.numberK.HeaderText = "Номер";
-			this.numberK.Name = "numberK";
-			this.numberK.ReadOnly = true;
-			this.numberK.Width = 80;
-			// 
-			// Litaral
-			// 
-			this.Litaral.FillWeight = 118.7817F;
-			this.Litaral.HeaderText = "Литералы";
-			this.Litaral.Name = "Litaral";
-			this.Litaral.ReadOnly = true;
-			// 
-			// numberL
-			// 
-			this.numberL.FillWeight = 81.21828F;
-			this.numberL.HeaderText = "Номер";
-			this.numberL.Name = "numberL";
-			this.numberL.ReadOnly = true;
-			// 
-			// Separators
-			// 
-			this.Separators.FillWeight = 118.7817F;
-			this.Separators.HeaderText = "Разделители ";
-			this.Separators.Name = "Separators";
-			this.Separators.ReadOnly = true;
-			// 
-			// numberR
-			// 
-			this.numberR.FillWeight = 81.21828F;
-			this.numberR.HeaderText = "Номер";
-			this.numberR.Name = "numberR";
-			this.numberR.ReadOnly = true;
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -459,11 +459,7 @@ namespace coursework_TAiFYA
 		public System.Windows.Forms.DataGridView tccTable;
 		private System.Windows.Forms.TabControl tabControl1;
 		private System.Windows.Forms.TabPage tabPage2;
-		private System.Windows.Forms.DataGridView indifTable;
-		private System.Windows.Forms.DataGridView separatorTable;
-		private System.Windows.Forms.DataGridView literalTable;
 		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.DataGridView firstTable;
 		private System.Windows.Forms.Panel panelTitle;
 		private System.Windows.Forms.Label labelTitle;
 		private System.Windows.Forms.Panel panelMenuButton;
@@ -482,6 +478,10 @@ namespace coursework_TAiFYA
 		private System.Windows.Forms.DataGridViewTextBoxColumn numberR;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Litaral;
 		private System.Windows.Forms.DataGridViewTextBoxColumn numberL;
+		public System.Windows.Forms.DataGridView indifTable;
+		public System.Windows.Forms.DataGridView separatorTable;
+		public System.Windows.Forms.DataGridView literalTable;
+		public System.Windows.Forms.DataGridView firstTable;
 	}
 }
 
